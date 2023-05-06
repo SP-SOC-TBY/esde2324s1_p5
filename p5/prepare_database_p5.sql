@@ -46,9 +46,9 @@ UNLOCK TABLES;
 --
 -- Table structure for table `furniture`
 --
-DROP USER IF EXISTS 'p5user'@'localhost';
-CREATE USER 'p5user'@'localhost' IDENTIFIED WITH mysql_native_password BY 'p5user';
-GRANT ALL PRIVILEGES ON furniture_p5.* TO 'p5user'@'localhost';
+DROP USER IF EXISTS 'p5user'@'%';
+CREATE USER 'p5user'@'%' IDENTIFIED WITH mysql_native_password BY 'p5user';
+GRANT ALL PRIVILEGES ON furniture_p5.* TO 'p5user'@'%';
 
 DROP TABLE IF EXISTS `furniture`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
