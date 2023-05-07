@@ -25,7 +25,7 @@ app.use(function(req,res,next){
 app.use(serveStatic(__dirname+"/public"));
 
 
-app.listen(port,hostname,function(){
+app.listen(port,function(){
 
     console.log(`Server hosted at http://${hostname}:${port}`);
 });
