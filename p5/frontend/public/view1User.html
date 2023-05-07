@@ -54,6 +54,9 @@
 
     <script>
 
+        // TODO: change to codespace address
+        const baseUrl = "http://localhost:8081";
+
         var urlParams = new URLSearchParams(window.location.search);//retrieve the query parameters(eg ?userid=1) from the url
         console.log(urlParams.has('userid')); // check if userid param is in query string, returns true or false
         console.log(urlParams.get('userid')); // value of userid param
@@ -62,7 +65,7 @@
         $("#posts").empty();//empty the div
 
         $.ajax({
-            url: "http://localhost:8081/user",
+            url: baseUrl + "/user",
             type: "GET",
             contentType: "application/json",
             dataType: "json",
@@ -119,7 +122,7 @@
                 //var tmpToken = localStorage.getItem("token");
                 $.ajax({
                     //headers: { 'authorization': 'Bearer ' + tmpToken },
-                    url: "http://localhost:8081/user/" + uid,
+                    url: baseUrl + "/user/" + uid,
                     type: "GET",
                     //data: data,
                     contentType: "application/json",

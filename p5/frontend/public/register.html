@@ -62,7 +62,7 @@
 
 
     $(document).ready(function () {
-
+      // TODO: change to codespace address
       const baseUrl = "http://localhost:8081";
       $("#form-register").submit((event) => {
         event.preventDefault()
@@ -79,7 +79,7 @@
             console.log(response)
 			if(response.status==200){
 				console.log('Successfully Registered!')
-				window.location.href = "http://localhost:3001/viewUsers.html";
+				window.location.href = "viewUsers.html";
 			}
           })
           .catch((error) => {
