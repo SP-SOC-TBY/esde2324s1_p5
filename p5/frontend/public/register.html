@@ -59,11 +59,11 @@
 
 
   <script>
-
-
     $(document).ready(function () {
-      // TODO: change to codespace address
-      const baseUrl = "http://localhost:8081";
+      
+      const hostname = (window.location.hostname);
+      const baseUrl = "https://" + hostname.replace("3001", "8081")
+
       $("#form-register").submit((event) => {
         event.preventDefault()
         const username = $("#username").val();

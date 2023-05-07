@@ -54,8 +54,8 @@
 
     <script>
 
-        // TODO: change to codespace address
-        const baseUrl = "http://localhost:8081";
+        const hostname = (window.location.hostname);
+        const baseUrl = "https://" + hostname.replace("3001", "8081")
 
         var urlParams = new URLSearchParams(window.location.search);//retrieve the query parameters(eg ?userid=1) from the url
         console.log(urlParams.has('userid')); // check if userid param is in query string, returns true or false
